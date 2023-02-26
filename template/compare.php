@@ -73,9 +73,9 @@
         <tr class="data">
             <?php foreach (array('fArray', 'sArray') as $blockType) { ?>
             <td class="type-<?php echo $_REQUEST['action']; ?>">
-                <h3><?php echo $tableName; ?> <sup style="color: red;"><?php 
+                <h3><?php echo $tableName; ?> <sup style="color: red;"><?php
                 if ($data != null && isset($data[$blockType]) && $data[$blockType] != null) {
-                    echo count($data[$blockType]); 
+                    echo count($data[$blockType]);
                 }?></sup></h3>
                 <div class="table-additional-info">
                     <?php if(isset($additionalTableInfo[$tableName][$blockType])) {
@@ -112,3 +112,9 @@
     <p>For more information go to <a href="http://compalex.net" target="_blank">compalex.net</a></p>
 </div>
 </body>
+
+<script type="text/javascript">
+  $(function() {
+    Data.showDiff();
+  });
+</script>
